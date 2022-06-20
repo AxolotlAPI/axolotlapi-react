@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+#page-home .header {
+    background-color: rgb(184, 90, 163);
+    padding: 32px 8px;
+
+    justify-content: center;
+    text-align: center;
+
+    font-family: "Lato", sans-serif;
+}
+
+#page-home .header h1 {
+    font-size: 3em;
+    color: white;
+}
+
+#page-home .header h2 {
+    font-size: 1.5em;
+    color: white;
+}
+
+#page-home .header .logo {
+    width: 256px;
+    height: 256px;
+}

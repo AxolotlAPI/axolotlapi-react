@@ -1,0 +1,24 @@
+.btn {
+    color: white;
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    padding: 8px 14px;
+    margin: 0 auto;
+
+    display: table;
+    
+    font-size: 1.125em;
+    
+    user-select: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn.btn-primary {
+    /* background-color: rgb(206, 120, 187); */
+    background: linear-gradient(to top, rgb(153, 84, 138), rgb(206, 120, 187));
+}
