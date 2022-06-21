@@ -7,11 +7,13 @@
     padding: 8px 14px;
     margin: 0 auto;
 
-    display: table;
+    display: inline-table;
     
     font-size: 1.125em;
     
     user-select: none;
+
+    margin: 0px 4px;
 }
 
 .btn:hover {

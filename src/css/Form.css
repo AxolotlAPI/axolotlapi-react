@@ -1,0 +1,16 @@
+form {
+    width: 80%;
+    
+    margin: 0 auto;
+}
+
+form input {
+    width: 100%;
+
+    margin: 2px;
+    padding: 6px;
+}
+
+form .form-row {
+    padding-bottom: 16px;
+}

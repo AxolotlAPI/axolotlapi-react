@@ -1,50 +1,29 @@
 import React from "react";
-import Button from "../components/Button";
 
-export default class PageLogin extends React.Component {
-    constructor(props) {
-        super(props);
-        
-        // this.schema = yup.object({
-        //     email: yup.string().email().required(),
-        //     password: yup.string().required()
-        // });
+import Form from "../components/Form";
+
+import API from "../API";
+
+export default function PageLogin() {
+    function handleLogin(button, inputs) {
+        if (!inputs.email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,}$/)) return console.log("Invalid email!");
+
+        API.login(inputs.email, inputs.password).then(() => {
+            window.location.href = "/";
+        });
     }
 
-    handleSubmit(values, form) {
-        console.log(values);
-        console.log(form);
+    const schema = {
+        "email": {
+            "label": "Email"
+        },
+        "password": {
+            "type": "password",
+            "label": "Password"
+        }
     }
 
-    render() {
-        return (
-            <form>
-                <div className="form-row">
-                    <h2>Login</h2>
-                </div>
-
-                <div className="form-row">
-                    <h4>E-mail</h4>
-                    <input name="email"></input>
-                </div>
-
-                <div className="form-row">
-                    <h4>Password</h4>
-                    <input name="password" type="password"></input>
-                </div>
-
-                <div className="form-row">
-                    <Button onClick={this.handleSubmit}>Test</Button>
-                </div>
-            </form>
-        );
-    }
-
-    // return (
-    //     <div className="marginedContent">
-    //         <Form schema={loginSchema} handleSubmit={handleSubmit}>
-
-    //         </Form>
-    //     </div>
-    // );
+    return (
+        <Form name="Login" buttons={[["Login", handleLogin], ["Register", handleLogin]]} schema={schema} />
+    );
 }
