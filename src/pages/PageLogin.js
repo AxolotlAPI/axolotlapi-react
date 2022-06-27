@@ -6,16 +6,16 @@ import API from "../API";
 
 export default function PageLogin() {
     function handleLogin(button, inputs) {
-        if (!inputs.email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,}$/)) return console.log("Invalid email!");
+        if (inputs.username === "" || inputs.password === "") return console.error("Missing required fields.");
 
-        API.login(inputs.email, inputs.password).then(() => {
-            window.location.href = "/";
+        API.login(inputs.username, inputs.password).then(() => {
+            window.location.href = "/dashboard";
         });
     }
 
     const schema = {
-        "email": {
-            "label": "Email"
+        "username": {
+            "label": "Username"
         },
         "password": {
             "type": "password",

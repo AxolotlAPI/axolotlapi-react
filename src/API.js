@@ -1,20 +1,20 @@
-import axios from "axios";
+import Axios from "axios";
+import Cookies from "js-cookie";
 
 const API ={
-    login(email, password) {
+    login(username, password) {
         return new Promise((res, rej) => {
-            axios({
+            Axios({
                 url: "http://localhost:8080/api/user/login",
                 method: "POST",
                 data: {
-                    email: email,
+                    username: username,
                     password: password
                 }
             }).then((response) => {
-                // Set a 24h valid cookie in ReactJS
-                document.cookie = `accessToken=${response.data.accessToken}; max-age=${24 * 60 * 60 * 1000};`;
+                Cookies.set("accessToken", response.data.accessToken, { expires: 1 }); // Set an accessToken cookie that expires in 1 day
                 res(response);
-            });
+            }).catch(rej);
         });
     }
 }

@@ -11,7 +11,7 @@ export default function PageHome() {
 
     function handleGetStarted(e) {
         e.preventDefault();
-        window.location.href = "/login";
+        window.location.href = "/dashboard";
     }
 
     return (
