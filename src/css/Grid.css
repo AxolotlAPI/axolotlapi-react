@@ -1,0 +1,10 @@
+.grid-row {
+    display: table;
+    table-layout: fixed;
+
+    width: 100%;
+}
+
+.grid-column {
+    display: table-cell;
+}

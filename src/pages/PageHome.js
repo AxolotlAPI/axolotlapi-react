@@ -1,5 +1,11 @@
 import "../css/PageHome.css";
 
+import Grid from "../components/grid/Grid";
+import Row from "../components/grid/Row";
+import Column from "../components/grid/Column";
+
+import Card from "../components/card/Card";
+
 import Button from "../components/Button";
 
 export default function PageHome() {
@@ -23,6 +29,109 @@ export default function PageHome() {
 
                 <Button onClick={handleGetStarted}>Get Started</Button>
             </div>
+
+            <Grid>
+                <Row>
+                    <h1>/api/user</h1>
+                </Row>
+                <Row>
+                    <Column>
+                        <Card title="/login">
+                            
+                        </Card>
+                    </Column>
+
+                    <Column>
+                        <Card title="/register">
+                            
+                        </Card>
+                    </Column>
+
+                    <Column>
+                        <Card title="/me">
+                            
+                        </Card>
+                    </Column>
+                </Row>
+
+                <Row>
+                    <h1>/api/axolotl-fact</h1>
+                </Row>
+                <Row>
+                    <Column>
+                        <Card title="/">
+
+                        </Card>
+                    </Column>
+
+                    <Column>
+                        <Card title="/mine">
+
+                        </Card>
+                    </Column>
+
+                    <Column>
+                        <Card title="/curated">
+
+                        </Card>
+                    </Column>
+                </Row>
+                <Row>
+                    <Column>
+                        <Card title="/">
+
+                        </Card>
+                    </Column>
+
+                    <Column>
+                        <Card title="/report">
+
+                        </Card>
+                    </Column>
+                </Row>
+
+                <Row>
+                    <h1>/api/axolotl-picture</h1>
+                </Row>
+                <Row>
+                    <Column>
+                        <Card title="/gary-the-axolotl">
+
+                        </Card>
+                    </Column>
+
+                    <Column>
+                        <Card title="/">
+
+                        </Card>
+                    </Column>
+
+                    <Column>
+                        <Card title="/mine">
+
+                        </Card>
+                    </Column>
+                </Row>
+                <Row>
+                    <Column>
+                        <Card title="/curated">
+
+                        </Card>
+                    </Column>
+
+                    <Column>
+                        <Card title="/">
+
+                        </Card>
+                    </Column>
+
+                    <Column>
+                        <Card title="/report">
+
+                        </Card>
+                    </Column>
+                </Row>
+            </Grid>
         </div>
     );
 }

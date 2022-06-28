@@ -10,7 +10,13 @@ export default function PageLogin() {
 
         API.login(inputs.username, inputs.password).then(() => {
             window.location.href = "/dashboard";
+            return <></>;
         });
+    }
+
+    function redirectRegister() {
+        window.location.href = "/register";
+        return <></>;
     }
 
     const schema = {
@@ -24,6 +30,6 @@ export default function PageLogin() {
     }
 
     return (
-        <Form name="Login" buttons={[["Login", handleLogin], ["Register", handleLogin]]} schema={schema} />
+        <Form name="Login" buttons={[["Login", handleLogin], ["Register", redirectRegister]]} schema={schema} />
     );
 }

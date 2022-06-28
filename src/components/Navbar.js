@@ -20,8 +20,8 @@ export default function Navbar() {
                 Axolotl API
             </Link>
             <ul>
+                <CustomLink to="/dashboard">Dashboard</CustomLink>
                 <CustomLink to="/pricing">Pricing</CustomLink>
-                <CustomLink to="/about">About</CustomLink>
             </ul>
         </nav>
     );

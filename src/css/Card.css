@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.card {
+    margin: 4px;
+    padding: 6px;
+    
+    border: 1px solid rgb(227, 138, 208);
+    border-radius: 5px;
+
+    background-color: rgb(184, 90, 163);
+
+    color: white;
+
+    font-family: "Lato", sans-serif;
+}
+
+.card:hover {
+    box-shadow: 0px 2px 5px gray;
+}
+
+.card-title {
+    font-size: 1.5em;
+}
